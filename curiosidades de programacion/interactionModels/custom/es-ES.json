@@ -1,0 +1,95 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "curiosidades de programación",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "como uso la skill",
+            "como usar",
+            "que hace esta skill",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "cierra la skill",
+            "cierrate",
+            "hasta luego",
+            "adios"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CustomLanguageIntent",
+          "slots": [
+            {
+              "name": "language",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "que sabes de {language}",
+            "dime algo sobre {language}",
+            "prueba {language}",
+            "dime una curiosidad sobre {language}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CustomLanguageIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "language",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.132212977806.1595222428575"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.132212977806.1595222428575",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No tengo referencias a ese lenguaje, puedes probar con otro, trata diciendo que sabes de JavaScript"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}

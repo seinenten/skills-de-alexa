@@ -1,0 +1,108 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "calculateur de voix",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "ferme toi calculateur",
+            "ferme toi calculateur de voix"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "aide"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "SumarIntent",
+          "slots": [
+            {
+              "name": "valorn",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "valorm",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{valorn} plus {valorm}",
+            "ajouter {valorn} plus {valorm}",
+            "alexa ajouter {valorn} plus {valorm}"
+          ]
+        },
+        {
+          "name": "RestarIntent",
+          "slots": [
+            {
+              "name": "valorn",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "valorm",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{valorn} moins {valorm}",
+            "soustrair {valorn} moins {valorm}",
+            "alexa soustrair {valorn} moins {valorm} "
+          ]
+        },
+        {
+          "name": "MultiplicarIntent",
+          "slots": [
+            {
+              "name": "valorn",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "valorm",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{valorn} par {valorm}",
+            "multiplier {valorn} par {valorm}",
+            "alexa multiplier {valorn} par {valorm}"
+          ]
+        },
+        {
+          "name": "DividirIntent",
+          "slots": [
+            {
+              "name": "valorn",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "valorm",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "diviser {valorn} entre {valorm}",
+            "alexa diviser {valorn} entre {valorm}",
+            "{valorn} entre {valorm}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "10"
+}

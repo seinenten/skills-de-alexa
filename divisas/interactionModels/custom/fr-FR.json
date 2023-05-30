@@ -1,0 +1,78 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "convertisseur de divises",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "CustomDivisaIntent",
+          "slots": [
+            {
+              "name": "cantidad",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "divisaO",
+              "type": "CURRENCIES"
+            },
+            {
+              "name": "divisaD",
+              "type": "CURRENCIES"
+            }
+          ],
+          "samples": [
+            "donne moi {cantidad} {divisaO} en {divisaD}",
+            "changer {cantidad} {divisaO} en {divisaD}",
+            "{cantidad} {divisaO} en {divisaD}",
+            "passer {cantidad} {divisaO} en {divisaD}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dolares",
+                "synonyms": [
+                  "dólar",
+                  "USD"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "euros",
+                "synonyms": [
+                  "euro",
+                  "EUR"
+                ]
+              }
+            }
+          ],
+          "name": "CURRENCIES"
+        }
+      ]
+    }
+  },
+  "version": "3"
+}

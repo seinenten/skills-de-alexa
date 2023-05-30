@@ -1,0 +1,98 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "visualizador nocturno",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "para que funciona",
+            "para que sirve",
+            "que hace",
+            "como funciona",
+            "ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "detener",
+            "cerrar",
+            "salir",
+            "detente",
+            "cierrate"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "CustomStarIntent",
+          "slots": [
+            {
+              "name": "star",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "conoces sobre {star} ",
+            "para que son las {star}",
+            "dime una curiosidad de la {star} ",
+            "dime algo sobre {star}",
+            "que sabes de las {star}"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "CustomStarIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "star",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.107501631934.1328172963747"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.107501631934.1328172963747",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "No tengo referencias sobre esa estrella, puedes probar con otra, trata diciendo que sabes de las estrellas"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "7"
+}
